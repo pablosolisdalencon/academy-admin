@@ -1,0 +1,16 @@
+/* app.component.css */
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  mat-grid-tile {
+    border: 1px solid #ddd;
+    overflow: hidden;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
