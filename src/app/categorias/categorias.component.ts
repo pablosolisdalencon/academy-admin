@@ -10,7 +10,7 @@ import { MaterialModule } from "../../modules/material/material.module";
   styleUrl: './categorias.component.css'
 })
 export class CategoriasComponent implements OnInit {
-      data: any = {};
+      message: any = {};
 
       constructor(private apiService: ApiService ){}
     ngOnInit(): void {
@@ -18,9 +18,9 @@ export class CategoriasComponent implements OnInit {
     }
 
     getCategorias(){
-      this.apiService.getData().subscribe(data=>{
-        this.data=data;
-        console.log(this.data);
+      this.apiService.getData().subscribe(message=>{
+        this.message=message;
+        console.log(this.message);
        })
 
     }
