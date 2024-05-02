@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../api.service';
+import { MaterialModule } from "../../modules/material/material.module";
 
 @Component({
   selector: 'app-categorias',
   standalone: true,
-  imports: [],
+  imports: [MaterialModule],
   templateUrl: './categorias.component.html',
   styleUrl: './categorias.component.css'
 })
