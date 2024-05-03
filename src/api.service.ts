@@ -6,11 +6,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  private apiUrl = 'http://186.64.113.109/api/v1/empresas'; // URL de la API
+  private apiUrl = '186.64.113.109/api/v1/empresas/1'; // URL de la API
 
   constructor(private http: HttpClient) {}
 
-  getData(): Observable<any> {
-    return this.http.get(this.apiUrl);
+  public getData(): Observable<any> {
+    return this.http.get<any>(this.apiUrl);
   }
 }

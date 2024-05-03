@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../api.service';
 import { MaterialModule } from "../../modules/material/material.module";
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-categorias',
   standalone: true,
-  imports: [MaterialModule],
+  imports: [HttpClientModule,MaterialModule],
   templateUrl: './categorias.component.html',
-  styleUrl: './categorias.component.css'
+  styleUrls: ['./categorias.component.css']
 })
 export class CategoriasComponent implements OnInit {
-      message: any = {};
+      data: any= {};
 
       constructor(private apiService: ApiService ){}
     ngOnInit(): void {
@@ -18,9 +19,9 @@ export class CategoriasComponent implements OnInit {
     }
 
     getCategorias(){
-      this.apiService.getData().subscribe(message=>{
-        this.message=message;
-        console.log(this.message);
+      this.apiService.getData().subscribe(data=>{
+        this.data=data;
+        console.log(this.data);
        })
 
     }
