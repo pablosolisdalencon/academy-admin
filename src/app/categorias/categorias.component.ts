@@ -12,17 +12,21 @@ import { HttpClientModule } from '@angular/common/http';
 })
 export class CategoriasComponent implements OnInit {
       data: any= {};
+      public api ="";
 
       constructor(private apiService: ApiService ){}
     ngOnInit(): void {
       this.getCategorias();
     }
 
-    getCategorias(){
-      this.apiService.getData().subscribe(data=>{
-        this.data=data;
-        console.log(this.data);
-       })
+   
+  getCategorias(){
+    this.api="categorias";
+    this.apiService.getData(this.api).subscribe((response) => {
+      this.data=response.message.data;
+      console.log((this.data));
+      
+    })
+  }
 
-    }
 }

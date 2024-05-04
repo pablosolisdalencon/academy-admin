@@ -6,11 +6,13 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  private apiUrl = '186.64.113.109/api/v1/empresas/1'; // URL de la API
+ 
+  private urlApi = 'https://webserver.prolinesoftware.cl/academy-api/public/api/v1/';
+  private finalUrl = "";
+  constructor(private http: HttpClient) { }
 
-  constructor(private http: HttpClient) {}
-
-  public getData(): Observable<any> {
-    return this.http.get<any>(this.apiUrl);
+  public getData(api: string | undefined): Observable<any>{
+    this.finalUrl=this.urlApi + api;
+    return this.http.get<any>(this.finalUrl);
   }
 }
