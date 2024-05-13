@@ -1,53 +1,75 @@
-                <!--ul>
-                    <li *ngFor="let dato of data">DATA:{{ dato }}</li>
-                </ul-->
-
-                 <!-- Page Content-->
-                 <div class="container px-5 my-5">
-                    <div class="text-center mb-5">
-                        <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Jugadores {{idCategoria}}</span></h1>
+<!-- Page Content-->
+<div class="container px-5 my-5">
+    <div class="text-center mb-5">
+        <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Jugadores</span></h1>
+    </div>
+    <div class="row gx-5 justify-content-center">
+        <div class="col-lg-11 col-xl-9 col-xxl-8">
+            <!-- Experiencia de Jugador-->
+            <section>
+                <div *ngFor="let jugador of data">
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <h2 class="text-primary fw-bolder mb-0">{{jugador.name }}</h2>
+                        <!-- Botón para descargar el currículum-->
+                        <!-- Nota: Establece el enlace href a un archivo PDF dentro de tu proyecto-->
+                        <!--a class="btn btn-primary px-4 py-3" href="#!">
+                            <div class="d-inline-block bi bi-download me-2"></div>
+                            Descargar Currículum
+                        </a-->
                     </div>
-                    <div class="row gx-5 justify-content-center">
-                        <div class="col-lg-11 col-xl-9 col-xxl-8">
-                            <!-- Experience Section-->
-                            <section>
-                                <div *ngFor="let datos of data">
-                                    <div class="d-flex align-items-center justify-content-between mb-4">
-                                        <h2 class="text-primary fw-bolder mb-0">{{datos.name }}</h2>
-                                        <!-- Download resume button-->
-                                        <!-- Note: Set the link href target to a PDF file within your project-->
-                                        <!--a class="btn btn-primary px-4 py-3" href="#!">
-                                            <div class="d-inline-block bi bi-download me-2"></div>
-                                            Download Resume
-                                        </a-->
-                                    </div>
-                                    <!-- Experience Card 1-->
-                                    <div class="card shadow border-0 rounded-4 mb-5">
-                                        <div class="card-body p-5">
-                                            <div class="row align-items-center gx-5">
-                                                <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                                    <div class="bg-light p-4 rounded-4">
-                                                        <div class="text-primary fw-bolder mb-2">{{datos.name }} </div>
-                                                        <div class="small fw-bolder">{{datos.description }}</div>
-                                                        <!--div class="small text-muted">{{datos.name }}</div>
-                                                        <div class="small text-muted">{{datos.name }}</div-->
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-8"><div>
-                                                <!--""    {{datos.name }}: {{datos.description }}. -->
-                                                <hr>
-                                                <a class="btn btn-primary px-4 py-3" href="#!">
-                                                    <div class="d-inline-block bi bi-tools me-2"></div>
-                                                    Gestionar Jugador {{datos.name }}
-                                                </a>
-                                                </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                    <!-- Tarjeta de Experiencia -->
+                    <div class="card shadow border-0 rounded-4 mb-5">
+                        <div class="card-body p-5">
+                            <div class="row align-items-center gx-5">
+                                <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                    <div class="bg-light p-4 rounded-4">
+                                        <div class="text-primary fw-bolder mb-2">{{jugador.name }} </div>
+                                        <div class="small fw-bolder">{{jugador.description }}</div>
+                                        <!--div class="small text-muted">{{jugador.name }}</div>
+                                        <div class="small text-muted">{{jugador.name }}</div-->
                                     </div>
                                 </div>
-      
-                            </section>
+                                <div class="col-lg-8">
+                                    <div>
+                                        <!--""    {{jugador.name }}: {{jugador.description }}. -->
+                                        <hr>
+                                        <a class="btn btn-primary px-4 py-3" href="#!">
+                                            <div class="d-inline-block bi bi-tools me-2"></div>
+                                            Gestionar Jugador {{jugador.name }}
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>        
+                    </div>
                 </div>
+
+                <hr>
+                <!-- Agregar Tarjeta de Experiencia -->
+                <!-- ADD Experience Card -->
+                <div class="card shadow border-0 rounded-4 mb-5">
+                    <div class="card-body p-5">
+                        <div class="row align-items-center gx-5">
+                            <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                <div class="bg-light p-4 rounded-4">
+                                    <div class="text-primary fw-bolder mb-2">Nueva Categoria...</div>
+                                    <div class="small fw-bolder">Nueva descripcion</div>
+                                    <!--div class="small text-muted">{{datos.name }}</div>
+                                    <div class="small text-muted">{{datos.name }}</div-->
+                                </div>
+                            </div>
+                            <div class="col-lg-8"><div>
+                            <!--""    {{datos.name }}: {{datos.description }}. -->
+                            
+                            <a class="btn btn-primary px-4 py-3" href="jugador">
+                                <div class="d-inline-block bi bi-plus-circle me-2"></div>
+                                Agregar Nuevo Jugador                            </a>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

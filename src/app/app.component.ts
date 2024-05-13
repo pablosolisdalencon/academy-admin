@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { MaterialModule } from '../modules/material/material.module';
 import { HomeComponent } from './home/home.component';
 import { JugadoresComponent } from './jugadores/jugadores.component';
+import { JugadorFormComponent } from './jugadores/jugador-form/jugador-form.component';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ContactComponent } from './contact/contact.component';
@@ -12,7 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [JugadoresComponent,HttpClientModule,CategoriasComponent,FooterComponent,ContactComponent,GalleryComponent,HomeComponent,RouterOutlet,MaterialModule],
+  imports: [JugadorFormComponent,JugadoresComponent,HttpClientModule,CategoriasComponent,FooterComponent,ContactComponent,GalleryComponent,HomeComponent,RouterOutlet,MaterialModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

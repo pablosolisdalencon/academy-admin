@@ -28,11 +28,12 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
                             <li class="nav-item"><a class="nav-link" href="#academia">Academia</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Jugadores</a></li>
-                            <li class="nav-item"><a class="nav-link" href="projects.html">Campeonatos</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Partidos</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Nominas</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Profesores</a></li>
+                            <li class="nav-item"><a class="nav-link" href="categorias">Categorias</a></li>
+                            <li class="nav-item"><a class="nav-link" href="jugadores">Jugadores</a></li>
+                            <li class="nav-item"><a class="nav-link" href="campeonatos">Campeonatos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="partidos">Partidos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="nominas">Nominas</a></li>
+                            <li class="nav-item"><a class="nav-link" href="profesores">Profesores</a></li>
                         </ul>
                     </div>
                 </div>
@@ -85,56 +86,8 @@
 
 </div>-->
   <!-- Divider-->
-  <div class="pb-5"></div>
-  <!-- Skills Section-->
-  <section>
-      <!-- Skillset Card-->
-      <!--div class="card shadow border-0 rounded-4 mb-5">
-          <div class="card-body p-5">
-              <-- Professional skills list->
-              <div class="mb-5">
-                  <div class="d-flex align-items-center mb-4">
-                      <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-tools"></i></div>
-                      <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Categorias</span></h3>
-                  </div>
-                  <div class="row row-cols-1 row-cols-md-3 mb-4">
-                      <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Infantil</div></div>
-                      <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Juvenil</div></div>
-                      <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Cadete</div></div>
-                  </div>
-                  <div class="row row-cols-1 row-cols-md-3">
-                      <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Sub-17</div></div>
-                      <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Sub-20</div></div>
-                      <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Sub-23</div></div>
-                  </div>
-              </div>
-              <-- Languages list->
-              <div class="mb-0">
-                  <div class="d-flex align-items-center mb-4">
-                      <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-code-slash"></i></div>
-                      <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Campeonatos</span></h3>
-                  </div>
-                  <div class="row row-cols-1 row-cols-md-3 mb-4">
-                      <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">HTML</div></div>
-                      <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">CSS</div></div>
-                      <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">JavaScript</div></div>
-                  </div>
-                  <div class="row row-cols-1 row-cols-md-3">
-                      <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Python</div></div>
-                      <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Ruby</div></div>
-                      <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Node.js</div></div>
-                  </div>
-              </div>
-          </div>
-      </div-->
-  </section>
-  <!--app-categorias></app-categorias-->
-  <app-home></app-home>
-
-  <app-jugadores></app-jugadores>
-  <!--app-contact></app-contact>
-
-  <app-gallery></app-gallery-->
+<div class="pb-5"></div>
+<router-outlet></router-outlet>
 </main>
 <app-footer></app-footer>
 <!-- Bootstrap core JS-->

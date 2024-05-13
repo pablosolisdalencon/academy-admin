@@ -1,0 +1,28 @@
+<!-- jugador-form.component.html -->
+
+<form [formGroup]="jugadorForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input matInput formControlName="name" placeholder="Nombre completo">
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Descripción</mat-label>
+      <textarea matInput formControlName="description" placeholder="Descripción"></textarea>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>RUT</mat-label>
+      <input matInput formControlName="rut" placeholder="RUT">
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Fecha de Nacimiento</mat-label>
+      <input matInput formControlName="fecha_nac" placeholder="Fecha de Nacimiento">
+    </mat-form-field>
+  
+    <!-- Agrega más campos según tus necesidades -->
+  
+    <button mat-raised-button color="primary" (click)="submitForm()">Guardar</button>
+  </form>
+  
