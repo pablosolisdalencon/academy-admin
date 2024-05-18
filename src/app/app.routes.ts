@@ -2,15 +2,14 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { CampeonatosComponent } from './campeonatos/campeonatos.component';
-import { JugadorFormComponent } from './jugadores/jugador-form/jugador-form.component';
-import { PartidosComponent } from './partidos/partidos.component';
+import { PartidosComponent } from './campeonatos/partidos/partidos.component';
 import { CategoriaComponent } from './categorias/categoria/categoria.component';
 import { CampeonatoComponent } from './campeonatos/campeonato/campeonato.component';
 import { JugadorComponent } from './jugadores/jugador/jugador.component';
 import { JugadoresComponent } from './jugadores/jugadores.component';
-import { PartidoComponent } from './partidos/partido/partido.component';
-import { NominaComponent } from './nominas/nomina/nomina.component';
-import { NominasComponent } from './nominas/nominas.component';
+import { PartidoComponent } from './campeonatos/partidos/partido/partido.component';
+import { NominaComponent } from './campeonatos/partidos/nominas/nomina/nomina.component';
+import { NominasComponent } from './campeonatos/partidos/nominas/nominas.component';
 
 export const routes: Routes = [
     {
@@ -18,7 +17,7 @@ export const routes: Routes = [
         component: HomeComponent 
     },
     {
-        path: 'categoria',
+        path: 'categoria/:id',
         component: CategoriaComponent
     },
     {

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-categoria',
   standalone: true,
@@ -8,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './categoria.component.css'
 })
 export class CategoriaComponent {
+  public id = this.route.snapshot.paramMap.get('id');
+  constructor(private route: ActivatedRoute) { }
+  
 
 }

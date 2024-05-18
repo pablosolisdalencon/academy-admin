@@ -3,10 +3,13 @@ import { ApiService } from '../../api.service';
 import { MaterialModule } from "../../modules/material/material.module";
 import { HttpClientModule } from '@angular/common/http';
 
+import { routes } from '../app.routes';
+import { RouterModule } from '@angular/router';
+
 @Component({
   selector: 'app-categorias',
   standalone: true,
-  imports: [HttpClientModule,MaterialModule],
+  imports: [ HttpClientModule,MaterialModule,RouterModule],
   templateUrl: './categorias.component.html',
   styleUrls: ['./categorias.component.css']
 })

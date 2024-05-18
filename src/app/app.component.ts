@@ -5,15 +5,15 @@ import { HomeComponent } from './home/home.component';
 import { JugadoresComponent } from './jugadores/jugadores.component';
 import { JugadorFormComponent } from './jugadores/jugador-form/jugador-form.component';
 import { CategoriasComponent } from './categorias/categorias.component';
+import { CategoriaComponent } from './categorias/categoria/categoria.component';
 import { GalleryComponent } from './gallery/gallery.component';
-import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { ApiService } from '../api.service';
 import { HttpClientModule } from '@angular/common/http';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [JugadorFormComponent,JugadoresComponent,HttpClientModule,CategoriasComponent,FooterComponent,ContactComponent,GalleryComponent,HomeComponent,RouterOutlet,MaterialModule],
+  imports: [CategoriaComponent,JugadorFormComponent,JugadoresComponent,HttpClientModule,CategoriasComponent,FooterComponent,GalleryComponent,HomeComponent,RouterOutlet,MaterialModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -50,7 +50,10 @@ export class AppComponent implements OnInit {
       
     })
   }
-  getJugadores(){
+  
+}
+/*
+getJugadores(){
     this.api="jugadores";
     this.apiService.getData(this.api).subscribe((response) => {
       this.data=response;
@@ -90,4 +93,4 @@ export class AppComponent implements OnInit {
       
     })
   }
-}
+*/
