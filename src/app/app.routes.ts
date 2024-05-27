@@ -25,7 +25,7 @@ export const routes: Routes = [
         component: CategoriasComponent
     },
     {
-        path: 'campeonato',
+        path: 'campeonato/:id',
         component: CampeonatoComponent
     },
     {
@@ -33,7 +33,7 @@ export const routes: Routes = [
         component: CampeonatosComponent
     },
     {
-        path: 'jugador',
+        path: 'jugador/:id',
         component: JugadorComponent
     },
     {
@@ -41,7 +41,7 @@ export const routes: Routes = [
         component: JugadoresComponent
     },
     {
-        path: 'partido',
+        path: 'partido/:id',
         component: PartidoComponent
     },
     {
@@ -49,7 +49,7 @@ export const routes: Routes = [
         component: PartidosComponent
     },
     {
-        path: 'nomina',
+        path: 'nomina/:1',
         component: NominaComponent
     },
     {

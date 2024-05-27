@@ -3,28 +3,30 @@ import { ApiService } from '../../api.service';
 import { MaterialModule } from "../../modules/material/material.module";
 import { HttpClientModule } from '@angular/common/http';
 
+import { routes } from '../app.routes';
+import { RouterModule } from '@angular/router';
 @Component({
-  selector: 'app-campeonatos', // Cambia el nombre del selector a 'app-campeonatos'
   standalone: true,
-  imports: [HttpClientModule, MaterialModule], // Asegúrate de importar los módulos necesarios
-  templateUrl: './campeonatos.component.html', // Cambia la ruta del archivo HTML si es necesario
-  styleUrls: ['./campeonatos.component.css'] // Cambia la ruta del archivo CSS si es necesario
+  selector: 'app-campeonatos', // Cambia el nombre del selector según tu entidad
+  templateUrl: './campeonatos.component.html', // Asegúrate de tener el archivo HTML correspondiente
+  styleUrls: ['./campeonatos.component.css'], // Ajusta la ruta al archivo CSS si es necesario
+  imports: [ HttpClientModule ,MaterialModule,RouterModule]
 })
-export class CampeonatosComponent implements OnInit { // Cambia el nombre de la clase a CampeonatosComponent
+export class CampeonatosComponent implements OnInit {
   data: any = {};
-  public api = "";
+  public api = 'campeonatos'; // Cambia el nombre de la API según tu entidad
 
   constructor(private apiService: ApiService) {}
 
   ngOnInit(): void {
-    this.getCampeonatos(); // Cambia el nombre del método a getCampeonatos
+    this.getCampeonatos();
   }
 
-  getCampeonatos() { // Cambia el nombre del método a getCampeonatos
-    this.api = "campeonatos"; // Cambia la URL de la API a la correspondiente para campeonatos
+  getCampeonatos() {
     this.apiService.getData(this.api).subscribe((response) => {
       this.data = response.message.data;
       console.log(this.data);
+      // Aquí puedes realizar más acciones con los datos obtenidos
     });
   }
 }

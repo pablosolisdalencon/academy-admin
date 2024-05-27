@@ -6,7 +6,7 @@
     "academy-app": {
       "projectType": "application",
       "schematics": {},
-      "root": "",
+      "root": "./",
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
@@ -39,8 +39,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "4000kb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",

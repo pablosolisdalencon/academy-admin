@@ -10,10 +10,11 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { FooterComponent } from './footer/footer.component';
 import { ApiService } from '../api.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CategoriaComponent,JugadorFormComponent,JugadoresComponent,HttpClientModule,CategoriasComponent,FooterComponent,GalleryComponent,HomeComponent,RouterOutlet,MaterialModule],
+  imports: [FormsModule,CategoriaComponent,JugadorFormComponent,JugadoresComponent,HttpClientModule,CategoriasComponent,FooterComponent,GalleryComponent,HomeComponent,RouterOutlet,MaterialModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
